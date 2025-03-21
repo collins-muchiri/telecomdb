@@ -1,0 +1,95 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "telecom-billing-api"
+version = "1.0.0"
+description = "A secure and efficient API for managing telecom billing data"
+authors = [
+    { name = "Telecom Billing API Team", email = "team@telecombillingapi.com" }
+]
+dependencies = [
+    "flask>=3.0.0",
+    "flask-restful>=0.3.10",
+    "flask-sqlalchemy>=3.1.1",
+    "flask-migrate>=4.0.5",
+    "flask-jwt-extended>=4.6.0",
+    "flask-limiter>=3.5.0",
+    "psycopg2-binary>=2.9.9",
+    "SQLAlchemy>=2.0.25",
+    "alembic>=1.13.1",
+    "cryptography>=42.0.2",
+    "PyJWT>=2.8.0",
+    "python-dotenv>=1.0.1",
+    "redis>=5.0.1",
+]
+
+requires-python = ">=3.9"
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 88
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-ra -q --cov=telecomdb1 --cov-report=term-missing"
+testpaths = [
+    "tests",
+]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+[tool.coverage.run]
+source = ["telecomdb1"]
+omit = [
+    "tests/*",
+    "setup.py",
+    "conftest.py",
+    "*/migrations/*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "pass",
+    "raise ImportError",
+]
+
+[tool.bandit]
+exclude_dirs = ["tests"]
+skips = ["B101"]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "1.0.0"
+tag_format = "v$version"
+bump_message = "bump: version $current_version → $new_version [skip ci]" 

@@ -1,0 +1,16 @@
+psycopg2-binary==2.9.9
+pandas==2.1.4
+python-dotenv==1.0.0
+cryptography==41.0.7
+pytest==7.4.3
+python-dateutil==2.8.2
+alembic==1.13.1
+PyJWT==2.8.0
+SQLAlchemy==2.0.25
+Flask==3.0.2
+Flask-RESTful==0.3.10
+gunicorn==21.2.0
+pytest-cov==4.1.0
+black==24.1.1
+flake8==7.0.0
+mypy==1.8.0 
