@@ -1,5 +1,11 @@
 # Telecom Billing System
 
+*Telecom database management system with analytics, reporting and data pipelines; Python.*
+
+![category](https://img.shields.io/badge/category-data-engineering-10B981?style=flat-square) ![language](https://img.shields.io/badge/language-Python-2563EB?style=flat-square) ![license](https://img.shields.io/badge/license-MIT-16A34A?style=flat-square) ![maintenance](https://img.shields.io/badge/maintenance-dormant-D97706?style=flat-square) ![repo](https://img.shields.io/badge/repo-telecomdb-111827?style=flat-square)
+
+---
+
 A secure and efficient API for managing telecom billing data, including customer management, bill generation, payment processing, and usage tracking.
 
 ## Features
@@ -58,8 +64,8 @@ A secure and efficient API for managing telecom billing data, including customer
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/telecomdb1.git
-cd telecomdb1
+git clone https://github.com/collins-muchiri/telecomdb.git
+cd telecomdb
 ```
 
 2. Create and activate a virtual environment:
