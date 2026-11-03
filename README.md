@@ -117,28 +117,28 @@ telecomdb1/
 ## API Endpoints
 
 ### Customers
-- `GET /api/customers` - List all customers
-- `GET /api/customers/{id}` - Get customer details
-- `POST /api/customers` - Create new customer
-- `PUT /api/customers/{id}` - Update customer
-- `DELETE /api/customers/{id}` - Deactivate customer
+- `GET /api/customers`: List all customers
+- `GET /api/customers/{id}`: Get customer details
+- `POST /api/customers`: Create new customer
+- `PUT /api/customers/{id}`: Update customer
+- `DELETE /api/customers/{id}`: Deactivate customer
 
 ### Bills
-- `GET /api/bills` - List all bills
-- `GET /api/bills/{id}` - Get bill details
-- `POST /api/bills` - Generate new bill
-- `PUT /api/bills/{id}` - Update bill
-- `GET /api/bills/{id}/payments` - List bill payments
+- `GET /api/bills`: List all bills
+- `GET /api/bills/{id}`: Get bill details
+- `POST /api/bills`: Generate new bill
+- `PUT /api/bills/{id}`: Update bill
+- `GET /api/bills/{id}/payments`: List bill payments
 
 ### Payments
-- `POST /api/payments` - Process payment
-- `GET /api/payments/{id}` - Get payment details
-- `GET /api/payments/customer/{customer_id}` - List customer payments
+- `POST /api/payments`: Process payment
+- `GET /api/payments/{id}`: Get payment details
+- `GET /api/payments/customer/{customer_id}`: List customer payments
 
 ### Usage
-- `GET /api/usage/{customer_id}` - Get customer usage
-- `POST /api/usage` - Record usage
-- `GET /api/usage/limits/{customer_id}` - Get usage limits
+- `GET /api/usage/{customer_id}`: Get customer usage
+- `POST /api/usage`: Record usage
+- `GET /api/usage/limits/{customer_id}`: Get usage limits
 
 ## Development
 
@@ -217,7 +217,7 @@ gunicorn --bind 0.0.0.0:5000 telecomdb1.api.app:app
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License: see the [LICENSE](LICENSE) file for details.
 
 ## Support
 
